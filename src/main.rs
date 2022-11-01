@@ -9,6 +9,8 @@ const ENV_FILE: &str = "/tmp/crypteia.json";
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
+    tracing_subscriber::fmt::init();
+
     log::cloudwatch_metric("main", "initialized", false, None);
     let env_vars: HashMap<String, String> = std::env::vars().collect();
     let env_map = ssm::get_envs(env_vars).await.unwrap();

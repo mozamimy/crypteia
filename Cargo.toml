@@ -18,6 +18,8 @@ futures = { version = "0.3.21" }
 aws-config = "0.14.0"
 aws-sdk-ssm = "0.14.0"
 lambda-extension = "0.5.0"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
 # lib
 redhook = "2.0"
 libc = "0.2.126"
